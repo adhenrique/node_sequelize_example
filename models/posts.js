@@ -3,9 +3,9 @@ module.exports = (sequelize, DataTypes) => {
         text: DataTypes.STRING,
     });
 
-    // Post.associate = (db) => {
-    //     db.posts.belongsTo(db.users, { foreignKey: 'userId' });
-    // };
+    Post.associate = (db) => {
+        db.Post.belongsTo(db.User, { foreignKey: 'userId' });
+    };
 
     return Post;
 };

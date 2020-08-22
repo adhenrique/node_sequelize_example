@@ -5,9 +5,9 @@ module.exports = (sequelize, DataTypes) => {
         password: DataTypes.STRING,
     });
 
-    // User.associate = (db) => {
-    //     db.users.hasMany(db.posts);
-    // };
+    User.associate = (db) => {
+        db.User.hasMany(db.Post);
+    };
 
     return User;
 };
